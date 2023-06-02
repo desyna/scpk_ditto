@@ -1,0 +1,73 @@
+[System]
+Name='dito'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='bpm'
+Range=[0 10]
+NumMFs=3
+MF1='Pelan':'trimf',[0 0 5]
+MF2='Sedang':'trimf',[0 5 10]
+MF3='Kenceng':'trimf',[5 10 10]
+
+[Input2]
+Name='usia_pendengar'
+Range=[0 50]
+NumMFs=3
+MF1='Anak-anak':'trimf',[0 0 12]
+MF2='Remaja':'trimf',[8 12 21]
+MF3='Dewasa':'trimf',[17.27 34.73 50.27]
+
+[Input3]
+Name='mood'
+Range=[0 10]
+NumMFs=3
+MF1='Sedih':'trimf',[0 0 5]
+MF2='B_Aja':'trimf',[0 5 10]
+MF3='Senang':'trimf',[5 10 10]
+
+[Output1]
+Name='Tingkat_Rekomended'
+Range=[0 10]
+NumMFs=3
+MF1='ga_rekomended':'trimf',[0 0 5]
+MF2='lumayan_rekomended':'trimf',[0 5 10]
+MF3='rekomended_banget':'trimf',[5 10 10]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 3, 1 (1) : 1
+1 2 1, 3 (1) : 1
+1 2 2, 2 (1) : 1
+1 2 3, 1 (1) : 1
+1 3 1, 3 (1) : 1
+1 3 2, 2 (1) : 1
+1 3 3, 1 (1) : 1
+2 1 1, 1 (1) : 1
+2 1 2, 1 (1) : 1
+2 1 3, 1 (1) : 1
+2 2 1, 3 (1) : 1
+2 2 2, 3 (1) : 1
+2 2 3, 2 (1) : 1
+2 3 1, 3 (1) : 1
+2 3 2, 3 (1) : 1
+2 3 3, 1 (1) : 1
+3 1 1, 1 (1) : 1
+3 1 2, 1 (1) : 1
+3 1 3, 1 (1) : 1
+3 2 1, 2 (1) : 1
+3 2 2, 1 (1) : 1
+3 2 3, 1 (1) : 1
+3 3 1, 2 (1) : 1
+3 3 2, 1 (1) : 1
+3 3 3, 1 (1) : 1
