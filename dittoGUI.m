@@ -151,13 +151,13 @@ sangat = imread('ditto.png');
 lumayan = imread('ditto.png');
 buruk = imread('ditto2.jpg');
 
-if result <= 5
+if result < 4.5
     ucapan = sprintf("%s","Tidak Direkomendasikan :(");
     imshow(buruk);
-elseif result > 5 && result < 10
+elseif result >= 4.5 && result <= 7.5
     ucapan = sprintf("%s","Cukup Direkomendasikan");
     imshow(lumayan);
-elseif result >= 10
+elseif result > 7.5
     ucapan = sprintf("%s","Sangat Direkomendasikan :)");
     imshow(sangat);
 end

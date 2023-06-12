@@ -15,33 +15,33 @@ DefuzzMethod='centroid'
 Name='bpm'
 Range=[-1 11]
 NumMFs=3
-MF1='Pelan':'trapmf',[-1 -1 0 5]
-MF2='Sedang':'trimf',[0 5 10]
-MF3='Kenceng':'trapmf',[5 10 11 11]
+MF1='Pelan':'trapmf',[-1 -1 2 5]
+MF2='Sedang':'trapmf',[0 4 6 10]
+MF3='Kenceng':'trapmf',[5 8 11 11]
 
 [Input2]
 Name='usia_pendengar'
 Range=[0 50]
 NumMFs=3
-MF1='Anak-anak':'trapmf',[0 0 1 12]
-MF2='Remaja':'trimf',[10 16 20]
-MF3='Dewasa':'trapmf',[18 30 50 50]
+MF1='Anak-anak':'trapmf',[0 0 5 12]
+MF2='Remaja':'trapmf',[9 12 17 21]
+MF3='Dewasa':'trapmf',[17 25 50 50]
 
 [Input3]
 Name='mood'
 Range=[-1 11]
 NumMFs=3
-MF1='Sedih':'trapmf',[-1 -1 0 5]
-MF2='B_Aja':'trimf',[-1 5 11]
-MF3='Senang':'trapmf',[5 10 11 11]
+MF1='Sedih':'trapmf',[-1 -1 2.5 5]
+MF2='B_Aja':'trapmf',[3 5 6.5 10]
+MF3='Senang':'trapmf',[6 9 11 11]
 
 [Output1]
 Name='Tingkat_Rekomended'
 Range=[-1 11]
 NumMFs=3
-MF1='ga_rekomended':'trapmf',[-1 -1 0 5]
-MF2='lumayan_rekomended':'trimf',[0 5 10]
-MF3='rekomended_banget':'trapmf',[5 10 11 11]
+MF1='ga_rekomended':'trapmf',[-1 -1 2 5]
+MF2='lumayan_rekomended':'trapmf',[2 4 6 8]
+MF3='rekomended_banget':'trapmf',[5 8 11 11]
 
 [Rules]
 1 1 1, 1 (1) : 1
