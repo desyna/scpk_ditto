@@ -146,19 +146,15 @@ mood = str2double(get(handles.mood, 'String'));
 fis = readfis('dito.fis');
 result = evalfis(fis, [bpm, usia, mood]);
 
-set(handles.textHasil,'String', result);
+set(handles.textHasil,'String', round(result, 2));
 
 sangat = imread('recommended.jpg');
-lumayan = imread('cukup_recommended.png');
 buruk = imread('not_recommended.jpg');
 
 if result <= 5
     ucapan = sprintf("%s","Tidak Direkomendasikan :(");
     imshow(buruk);
-elseif result > 5 && result <= 7.1
-    ucapan = sprintf("%s","Cukup Direkomendasikan");
-    imshow(lumayan);
-elseif result > 7.1
+else
     ucapan = sprintf("%s","Sangat Direkomendasikan :)");
     imshow(sangat);
 end
