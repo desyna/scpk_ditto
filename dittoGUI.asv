@@ -126,12 +126,12 @@ function sliderMood_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 sliderValue = get(hObject, 'Value');
 set(handles.mood,'String',num2str(sliderValue));
-if (sliderValue <= 4)
-  set(handles.textMood,'String', "(Sedih)");
-elseif (sliderValue <= 7.25)
-  set(handles.textMood,'String', "(B Aja)");
+if (sliderValue <= 3)
+  set(handles.textMood,'String', "(Pelan)");
+elseif (sliderValue <= 6.8)
+  set(handles.textMood,'String', "(Sedang)");
 else
-  set(handles.textMood,'String', "(Senang)");
+  set(handles.textMood,'String', "(Kencang)");
 end
 
 
@@ -161,9 +161,9 @@ result = evalfis(fis, [bpm, usia, mood]);
 
 set(handles.textHasil,'String', result);
 
-sangat = imread('recommended.jpg');
-lumayan = imread('cukup_recommended.png');
-buruk = imread('not_recommended.jpg');
+sangat = imread('ditto.png');
+lumayan = imread('ditto.png');
+buruk = imread('ditto2.jpg');
 
 if result <= 5
     ucapan = sprintf("%s","Tidak Direkomendasikan :(");
