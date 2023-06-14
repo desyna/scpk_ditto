@@ -81,13 +81,7 @@ function sliderBpm_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 sliderValue = get(hObject, 'Value');
 set(handles.bpm,'String', num2str(sliderValue));
-if (sliderValue <= 3)
-  set(handles.textBPM,'String', "(Pelan)");
-elseif (sliderValue <= 6.8)
-  set(handles.textBPM,'String', "(Sedang)");
-else
-  set(handles.textBPM,'String', "(Kencang)");
-end
+
 
 % --- Executes during object creation, after setting all properties.
 function sliderBpm_CreateFcn(hObject, eventdata, handles)
@@ -126,13 +120,6 @@ function sliderMood_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 sliderValue = get(hObject, 'Value');
 set(handles.mood,'String',num2str(sliderValue));
-if (sliderValue <= 4)
-  set(handles.textMood,'String', "(Sedih)");
-elseif (sliderValue <= 7.25)
-  set(handles.textMood,'String', "(B Aja)");
-else
-  set(handles.textMood,'String', "(Senang)");
-end
 
 
 % --- Executes during object creation, after setting all properties.
