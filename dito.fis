@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=3
 NumOutputs=1
-NumRules=27
+NumRules=3
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -15,59 +15,35 @@ DefuzzMethod='centroid'
 Name='bpm'
 Range=[0 10]
 NumMFs=3
-MF1='Pelan':'trapmf',[0 0 2.5 5]
-MF2='Sedang':'trapmf',[1 4 6 9]
-MF3='Kencang':'trapmf',[5 7.5 10 10]
+MF1='Pelan':'trapmf',[0 0 2.5 4]
+MF2='Sedang':'trapmf',[2.5 4 6 7.5]
+MF3='Kencang':'trapmf',[6 7.5 10 10]
 
 [Input2]
 Name='usia_pendengar'
 Range=[0 50]
 NumMFs=3
-MF1='Anak-anak':'trapmf',[0 0 5 12]
+MF1='Anak-anak':'trapmf',[0 0 9 12]
 MF2='Remaja':'trapmf',[9 12 17 21]
-MF3='Dewasa':'trapmf',[17 25 50 50]
+MF3='Dewasa':'trapmf',[17 21 50 50]
 
 [Input3]
 Name='mood'
 Range=[0 10]
 NumMFs=3
 MF1='Sedih':'trapmf',[0 0 3 5]
-MF2='biasa_aja':'trapmf',[3 5 6.5 9]
-MF3='Senang':'trapmf',[6 8 10 10]
+MF2='biasa_aja':'trapmf',[3 5 6.5 8]
+MF3='Senang':'trapmf',[6.5 8 10 10]
 
 [Output1]
 Name='Tingkat_Rekomended'
 Range=[0 10]
 NumMFs=3
-MF1='tidak_rekomendasi':'trapmf',[0 0 2.5 5]
+MF1='tidak_rekomendasi':'trapmf',[0 0 2.5 4]
 MF2='lumayan_rekomenasi':'trapmf',[2.5 4 6 7.5]
-MF3='sangat_rekomendasi':'trapmf',[5 7.5 10 10]
+MF3='sangat_rekomendasi':'trapmf',[6 7.5 10 10]
 
 [Rules]
-1 1 1, 1 (1) : 1
-1 1 2, 1 (1) : 1
-1 1 3, 1 (1) : 1
-1 2 1, 3 (1) : 1
-1 2 2, 2 (1) : 1
-1 2 3, 1 (1) : 1
-1 3 1, 3 (1) : 1
-1 3 2, 2 (1) : 1
-1 3 3, 1 (1) : 1
-2 1 1, 1 (1) : 1
-2 1 2, 1 (1) : 1
-2 1 3, 1 (1) : 1
-2 2 1, 3 (1) : 1
-2 2 2, 3 (1) : 1
-2 2 3, 2 (1) : 1
-2 3 1, 3 (1) : 1
-2 3 2, 3 (1) : 1
-2 3 3, 1 (1) : 1
-3 1 1, 1 (1) : 1
-3 1 2, 1 (1) : 1
-3 1 3, 1 (1) : 1
-3 2 1, 2 (1) : 1
-3 2 2, 1 (1) : 1
-3 2 3, 1 (1) : 1
-3 3 1, 2 (1) : 1
-3 3 2, 1 (1) : 1
-3 3 3, 1 (1) : 1
+1 2 1, 3 (1) : 2
+3 1 3, 1 (1) : 2
+2 3 2, 2 (1) : 2
